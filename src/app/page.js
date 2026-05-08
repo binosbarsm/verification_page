@@ -2,136 +2,153 @@ export default function Home() {
   return (
     <main className="
       min-h-screen
-      bg-gray-300
+      bg-gray-200
       flex
       justify-center
-      items-center
-      p-4
+      p-3 sm:p-5
     ">
-      
-      {/* CERTIFICATE SHELL */}
       <div className="
-        bg-white
+        bg-[#f3f3f3]
         w-full
-        max-w-[900px]
-        aspect-[1/1.414]  /* A4 ratio */
-        shadow-2xl
-        border-4
-        border-blue-700
-        p-6 sm:p-10
-        relative
-        overflow-hidden
+        max-w-5xl
+        p-5 sm:p-8 md:p-14
       ">
 
-        {/* WATERMARK (optional official feel) */}
-        <div className="
-          absolute
-          inset-0
-          flex
-          items-center
-          justify-center
-          opacity-5
-          text-6xl
-          font-bold
-          text-blue-700
-          select-none
-          pointer-events-none
-        ">
-          VRB
-        </div>
-
         {/* HEADER */}
-        <div className="flex items-center gap-4 mb-8 relative z-10">
+        <div className="
+          flex
+          flex-col sm:flex-row
+          items-center sm:items-start
+          gap-4 sm:gap-6
+          mb-10 sm:mb-16
+        ">
+
+          {/* LOGO */}
           <img
             src="/vrblogo.png"
             alt="VRB Logo"
-            className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+            className="
+              w-16 h-16
+              sm:w-24 sm:h-24
+              object-contain
+            "
           />
 
+          {/* TITLE */}
           <div className="flex-1 text-center">
             <h1 className="
-              text-lg sm:text-3xl
+              text-xl sm:text-3xl md:text-5xl
               font-bold
-              text-blue-800
-              uppercase
-              tracking-wide
+              text-blue-700
+              leading-tight
             ">
-              Valuers Registration Board
+              VALUERS REGISTRATION BOARD
             </h1>
 
-            <p className="text-xs sm:text-sm italic text-gray-600">
+            <p className="
+              italic
+              text-gray-600
+              mt-1 sm:mt-2
+              text-sm sm:text-lg
+            ">
               Integrity and Fairness
             </p>
           </div>
+
         </div>
 
-        {/* TITLE */}
-        <div className="text-center mb-8 relative z-10">
+        {/* REGISTRATION SECTION */}
+        <section className="mb-12 sm:mb-16">
+
           <h2 className="
-            text-xl sm:text-3xl
+            text-2xl sm:text-3xl
             font-bold
             text-blue-700
-            border-b-2
-            border-blue-700
-            inline-block
-            px-4 pb-1
+            mb-6 sm:mb-8
           ">
-            REGISTRATION CERTIFICATE
+            REGISTRATION
           </h2>
-        </div>
 
-        {/* DETAILS */}
-        <div className="grid grid-cols-2 gap-y-3 text-xs sm:text-base relative z-10">
+          <div className="
+            grid
+            grid-cols-1 sm:grid-cols-2
+            gap-y-4 sm:gap-y-5
+            gap-x-6
+            text-base sm:text-xl
+          ">
 
-          <span className="font-bold">Registration Number</span>
-          <span>VRB/FRV/023/2019</span>
+            <p className="font-bold">Registration Number</p>
+            <p>VRB/FRV/023/2019</p>
 
-          <span className="font-bold">Name</span>
-          <span>Joseph Inyas Shewiyo</span>
+            <p className="font-bold">Name</p>
+            <p>Joseph Inyas Shewiyo</p>
 
-          <span className="font-bold">Gender</span>
-          <span>Male</span>
+            <p className="font-bold">Gender</p>
+            <p>Male</p>
 
-          <span className="font-bold">Email</span>
-          <span className="break-words text-blue-700">
-            shewiyoj@gmail.com
-          </span>
+            <p className="font-bold">Email</p>
+            <p className="text-blue-700 underline break-words">
+              shewiyoj@gmail.com
+            </p>
 
-          <span className="font-bold">Phone</span>
-          <span>+255714814298</span>
+            <p className="font-bold">Phone</p>
+            <p>+255714814298</p>
 
-          <span className="font-bold">Address</span>
-          <span>Dodoma, Tanzania</span>
+            <p className="font-bold">Address</p>
+            <p>Dodoma, Tanzania</p>
 
-          <span className="font-bold">Registration Type</span>
-          <span>Full Registration (FRV)</span>
-        </div>
+            <p className="font-bold">Registration Type</p>
+            <p>Full Registration (FRV)</p>
+
+          </div>
+
+        </section>
 
         {/* EDUCATION */}
-        <div className="mt-8 relative z-10">
-          <h3 className="font-bold text-blue-700 mb-2">
-            Education Background
-          </h3>
+        <section className="mb-16 sm:mb-24">
 
-          <p className="text-xs sm:text-base">
-            Bachelor of Law (LLB) – The Open University Of Tanzania
-          </p>
-          <p className="text-xs sm:text-base">
-            MSc In Land Management with Bias In Built Environment
-          </p>
-        </div>
+          <h2 className="
+            text-2xl sm:text-3xl
+            font-bold
+            text-blue-700
+            mb-6 sm:mb-8
+          ">
+            EDUCATION BACKGROUND
+          </h2>
+
+          <div className="
+            flex flex-col
+            gap-3 sm:gap-6
+            text-base sm:text-xl
+          ">
+            <p>
+              Bachelor of Law (LLB) – The Open University Of Tanzania
+            </p>
+
+            <p>
+              MSc In Land Management with Bias In Built Environment
+            </p>
+          </div>
+
+        </section>
 
         {/* FOOTER */}
-        <div className="absolute bottom-6 left-6 right-6 flex justify-between text-xs sm:text-base relative z-10">
-          <div>
-            <p className="font-bold">Generated By:</p>
-            <p>Registrar</p>
+        <div className="text-base sm:text-xl">
+
+          <div className="font-bold mb-2">
+            Generated By:
           </div>
 
-          <div className="text-right">
-            <p className="font-bold">Signature</p>
-            <p className="mt-2">JOSEPH I. SHEWIYO</p>
+          <div className="
+            flex flex-col sm:flex-row
+            sm:items-center
+            gap-1 sm:gap-3
+          ">
+            <span className="font-bold">Registrar</span>
+            <span className="hidden sm:inline">:</span>
+            <span>JOSEPH I. SHEWIYO</span>
           </div>
+
         </div>
 
       </div>
